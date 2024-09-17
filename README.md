@@ -19,24 +19,24 @@
 
 ## Объявление пакета, к которому пренадлжит файл:
 
-package main
+	package main
 
 ## Импорты пакетов fmt(ввод-вывод) и time(для работы с датами и временем) 
 
-import (
-	"fmt"
-	"time"
-)
+	import (
+		"fmt"
+		"time"
+	)
 
 ## 1 Данная часть кода обращается к функции Now() из пакета time и выводит информацию в консоль приложения 
 
-    currentTime := time.Now()
+    	currentTime := time.Now()
 	fmt.Println("Задание 1, вывод дата+время")
 	fmt.Println("Текущая дата и время:", currentTime)
 
 
 ## 2 В этом блоке кода приведены некоторые типы данных(целые числа, числа с плавающей точкой, строка и булево), которые выводятся в консоль 
-    var intVar int = 10
+    	var intVar int = 10
 	var floatVar float64 = 3.14
 	var stringVar string = "Hello, World!"
 	var boolVar bool = true
@@ -65,7 +65,7 @@ import (
 
 ## 4 Операции с двумя заданными целыми числами, и их вывод
 
-    a := 10
+   	a := 10
 	b := 5
 
 	fmt.Println("Задание 4, арифметические операции с двумя целыми числами ")
@@ -101,106 +101,118 @@ import (
 
 ## Общий листинг программы:
 
-package main
+	package main
+	
+	import (
+		"fmt"
+		"time"
+	)
 
-import (
-	"fmt"
-	"time"
-)
+	func sumAndDifference(a, b float64) (float64, float64) {
+		return a + b, a - b
+	}
 
-func sumAndDifference(a, b float64) (float64, float64) {
-	return a + b, a - b
-}
-
-func main() {
-	// 1
-	currentTime := time.Now()
-	fmt.Println("Задание 1, вывод дата+время")
-	fmt.Println("Текущая дата и время:", currentTime)
-
-	// 2
-	var intVar int = 10
-	var floatVar float64 = 3.14
-	var stringVar string = "Hello, World!"
-	var boolVar bool = true
-
-	fmt.Println("Задание 2, вывод int, float64(double), string, bool")
-
-	fmt.Println("intVar:", intVar)
-	fmt.Println("floatVar:", floatVar)
-	fmt.Println("stringVar:", stringVar)
-	fmt.Println("boolVar:", boolVar)
-	// 3
-	shortIntVar := 20
-	shortFloatVar := 6.28
-	shortStringVar := "Привет дружбан"
-	shortBoolVar := false
-
-	fmt.Println("Задание 3, краткая форма объявления переменных ")
-
-	fmt.Println("shortIntVar:", shortIntVar)
-	fmt.Println("shortFloatVar:", shortFloatVar)
-	fmt.Println("shortStringVar:", shortStringVar)
-	fmt.Println("shortBoolVar:", shortBoolVar)
-
-	//  4
-	a := 10
-	b := 5
-
-	fmt.Println("Задание 4, арифметические операции с двумя целыми числами ")
-
-	fmt.Println("Сумма:", a+b)
-	fmt.Println("Разность:", a-b)
-	fmt.Println("Произведение:", a*b)
-	fmt.Println("Частное:", a/b)
-
-	// 5
-	x := 170.14
-	y := 2.71
-
-	sum, diff := sumAndDifference(x, y)
-
-	fmt.Println("Задание 5, вычисление суммы и разности двух чисел с плавающей запятой ")
-
-	fmt.Println("Сумма:", sum)
-	fmt.Println("Разность:", diff)
-
-	// 6
-	num1 := 5.0
-	num2 := 7.0
-	num3 := 9.0
-
-	average := (num1 + num2 + num3) / 3
-
-	fmt.Println("Задание 6, вычисление среднего значения трех чисел ")
-
-	fmt.Println("Среднее значение:", average)
-}
+	func main() {
+		// 1
+		currentTime := time.Now()
+		fmt.Println("Задание 1, вывод дата+время")
+		fmt.Println("Текущая дата и время:", currentTime)
+	
+		// 2
+		var intVar int = 10
+		var floatVar float64 = 3.14
+		var stringVar string = "Hello, World!"
+		var boolVar bool = true
+	
+		fmt.Println("Задание 2, вывод int, float64(double), string, bool")
+	
+		fmt.Println("intVar:", intVar)
+		fmt.Println("floatVar:", floatVar)
+		fmt.Println("stringVar:", stringVar)
+		fmt.Println("boolVar:", boolVar)
+		// 3
+		shortIntVar := 20
+		shortFloatVar := 6.28
+		shortStringVar := "Привет дружбан"
+		shortBoolVar := false
+	
+		fmt.Println("Задание 3, краткая форма объявления переменных ")
+	
+		fmt.Println("shortIntVar:", shortIntVar)
+		fmt.Println("shortFloatVar:", shortFloatVar)
+		fmt.Println("shortStringVar:", shortStringVar)
+		fmt.Println("shortBoolVar:", shortBoolVar)
+	
+		//  4
+		a := 10
+		b := 5
+	
+		fmt.Println("Задание 4, арифметические операции с двумя целыми числами ")
+	
+		fmt.Println("Сумма:", a+b)
+		fmt.Println("Разность:", a-b)
+		fmt.Println("Произведение:", a*b)
+		fmt.Println("Частное:", a/b)
+	
+		// 5
+		x := 170.14
+		y := 2.71
+	
+		sum, diff := sumAndDifference(x, y)
+	
+		fmt.Println("Задание 5, вычисление суммы и разности двух чисел с плавающей запятой ")
+	
+		fmt.Println("Сумма:", sum)
+		fmt.Println("Разность:", diff)
+	
+		// 6
+		num1 := 5.0
+		num2 := 7.0
+		num3 := 9.0
+	
+		average := (num1 + num2 + num3) / 3
+	
+		fmt.Println("Задание 6, вычисление среднего значения трех чисел ")
+	
+		fmt.Println("Среднее значение:", average)
+	}
 
 ## Вывод:
 
 PS C:\Лабы\1 семестр\Прикладное программирование\Лаба 1> go run main.go
+
 Задание 1, вывод дата+время
+
 Текущая дата и время: 2024-09-17 23:43:24.3879788 +0400 +04 m=+0.000000001
+
 Задание 2, вывод int, float64(double), string, bool
+
 intVar: 10
 floatVar: 3.14
 stringVar: Hello, World!
 boolVar: true
+
 Задание 3, краткая форма объявления переменных 
+
 shortIntVar: 20
 shortFloatVar: 6.28
 shortStringVar: Привет дружбан
 shortBoolVar: false
+
 Задание 4, арифметические операции с двумя целыми числами 
+
 Сумма: 15
 Разность: 5
 Произведение: 50
 Частное: 2
+
 Задание 5, вычисление суммы и разности двух чисел с плавающей запятой
+
 Сумма: 172.85
 Разность: 167.42999999999998
+
 Задание 6, вычисление среднего значения трех чисел
+
 Среднее значение: 7
 
 
