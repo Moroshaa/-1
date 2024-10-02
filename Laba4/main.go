@@ -10,7 +10,7 @@ func main() {
 	for {
 
 		var TaskNumber int
-		fmt.Println("Выберите номер задания:\n1 - Работа с картами\n2 - Работа с регистром\n3 - Разворот массива\nДля выхода выберите 0")
+		fmt.Println("Выберите номер задания:\n1 - Работа с картами\n2 - Работа с регистром\n3 - Разворот массива\n4 - Сумма чисел\nДля выхода выберите 0")
 		fmt.Scan(&TaskNumber)
 
 		switch TaskNumber {
@@ -21,6 +21,8 @@ func main() {
 			upperCase()
 		case 3:
 			reverseArr()
+		case 4:
+			sumNumbers()
 		case 0:
 			fmt.Println("Пока!")
 			return
@@ -96,6 +98,22 @@ func people() {
 			fmt.Println("Выберите от 1 до 3! ")
 		}
 	}
+}
+func sumNumbers() {
+	var a int
+	var b int
+	var c int
+	var d int
+	fmt.Print("Введите  1 число: ")
+	fmt.Scan(&a)
+	fmt.Print("Введите  2 число: ")
+	fmt.Scan(&b)
+	fmt.Print("Введите  3 число: ")
+	fmt.Scan(&c)
+	fmt.Print("Введите  4 число: ")
+	fmt.Scan(&d)
+	sum := a + b + c + d
+	fmt.Printf("Сумма чисел %d, %d, %d, %d = %d\n", a, b, c, d, sum)
 }
 func upperCase() {
 	var str string
