@@ -1,35 +1,36 @@
-## Лабораторая работа №7
+# Лабораторая работа №7
 
-# Для проверки первого задания запустить serever.go следом client.go
+## Для проверки первого задания 
+запустить serever.go следом client.go и отправит сообщение
 
-# Для проверки http
-запустить http.go зайти в браузер вставить http://localhost:8080/hello
+## Для проверки http
+запустить http.go зайти в браузер вставить _http://localhost:8080/hello_
 для проверки Post/data
--X POST http://localhost:8080/data -d '{"key": "value"}' -H "Content-Type: application/json"
+_-X POST http://localhost:8080/data -d '{"key": "value"}' -H "Content-Type: application/json"_
 
 
-# Для проверки websocket
+## Для проверки websocket
 запустить websocket.go открыть консоль в браузере и вставить следующее 
 
 
-const socket = new WebSocket("ws://localhost:8080/ws");
+`const socket = new WebSocket("ws://localhost:8080/ws");`
 
-socket.onopen = () => {
+`socket.onopen = () => {
     console.log("Соединение установлено!");
     socket.send("Привет от клиента!");
-};
+};`
 
-socket.onmessage = (event) => {
+`socket.onmessage = (event) => {
     console.log("Новое сообщение:", event.data);
-};
+};`
 
-socket.onclose = () => {
+`socket.onclose = () => {
     console.log("Соединение закрыто.");
-};
+};`
 
 // Отправить сообщение
-function sendMessage(message) {
+`function sendMessage(message) {
     socket.send(message);
-}
+}`
 
 если не ворк, скрипнуть предупреждение "allow pasting" и попробовать еще раз 
