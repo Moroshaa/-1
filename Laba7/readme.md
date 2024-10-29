@@ -4,9 +4,11 @@
 запустить serever.go следом client.go и отправит сообщение
 
 ## Для проверки http
-запустить http.go зайти в браузер вставить _http://localhost:8080/hello_
-для проверки Post/data
-_-X POST http://localhost:8080/data -d '{"key": "value"}' -H "Content-Type: application/json"_
+запустить http.go зайти в браузер вставить
+### Для проверки get
+_http://localhost:8080/hello_
+### Для проверки Post/data
+_http://localhost:8080/data -d '{"key": "value"}' -H "Content-Type: application/json"_
 
 
 ## Для проверки websocket
