@@ -12,24 +12,18 @@ _-X POST http://localhost:8080/data -d '{"key": "value"}' -H "Content-Type: appl
 ## Для проверки websocket
 запустить websocket.go открыть консоль в браузере и вставить следующее 
 
-
-`const socket = new WebSocket("ws://localhost:8080/ws");`
-
-`socket.onopen = () => {
+`const socket = new WebSocket("ws://localhost:8080/ws");
+socket.onopen = () => {
     console.log("Соединение установлено!");
     socket.send("Привет от клиента!");
-};`
-
-`socket.onmessage = (event) => {
+};
+socket.onmessage = (event) => {
     console.log("Новое сообщение:", event.data);
-};`
-
-`socket.onclose = () => {
+};
+socket.onclose = () => {
     console.log("Соединение закрыто.");
-};`
-
-// Отправить сообщение
-`function sendMessage(message) {
+};
+function sendMessage(message) {
     socket.send(message);
 }`
 
