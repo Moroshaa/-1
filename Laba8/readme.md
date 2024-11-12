@@ -15,3 +15,5 @@ http://localhost:9090/users/2
 и редактируем 
 ## Проверка delete 
 http://localhost:9090/users/2
+## тесты
+go test -v и все ворк
